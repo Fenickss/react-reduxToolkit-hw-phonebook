@@ -85,6 +85,9 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {};
+const mapStateToProps = state => ({
+  contacts: state.phoneBook.contacts,
+  filter: state.phoneBook.filter,
+});
 
 export default connect(mapStateToProps)(App);
