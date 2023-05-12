@@ -5,6 +5,7 @@ import FormContact from './Components/FormContact/FormContact';
 import ContactList from './Components/ContactList';
 import Container from './Components/Container';
 import Filter from './Components/Filter';
+import { connect } from 'react-redux';
 
 // import shortid from "shortid";
 
@@ -84,4 +85,6 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {};
+
+export default connect(mapStateToProps)(App);
