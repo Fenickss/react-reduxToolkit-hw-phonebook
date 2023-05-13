@@ -10,24 +10,24 @@ import { connect } from 'react-redux';
 // import shortid from "shortid";
 
 class App extends Component {
-  state = {
-    contacts: [],
-    filter: '',
-    name: '',
-    number: '',
-  };
+  // state = {
+  //   contacts: [],
+  //   filter: '',
+  //   name: '',
+  //   number: '',
+  // };
 
-  addContact = (name, number) => {
-    const contact = {
-      name,
-      number,
-      id: nanoid(),
-    };
+  // addContact = (name, number) => {
+  //   const contact = {
+  //     name,
+  //     number,
+  //     id: nanoid(),
+  //   };
 
-    this.setState(prevState => ({
-      contacts: [contact, ...prevState.contacts],
-    }));
-  };
+  //   this.setState(prevState => ({
+  //     contacts: [contact, ...prevState.contacts],
+  //   }));
+  // };
 
   deleteContact = contactId => {
     this.setState(prevState => ({
@@ -85,9 +85,15 @@ class App extends Component {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    addContact: value => dispatch(value),
+  };
+};
+
 const mapStateToProps = state => ({
   contacts: state.phoneBook.contacts,
   filter: state.phoneBook.filter,
 });
 
-export default connect(mapStateToProps)(App);
+export default connect(mapDispatchToProps, mapStateToProps)(App);
