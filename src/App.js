@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 
 import FormContact from './Components/FormContact/FormContact';
 import ContactList from './Components/ContactList';
@@ -74,7 +74,7 @@ class App extends Component {
 
     return (
       <Container>
-        <FormContact onSubmit={this.addContact} />
+        <FormContact onSubmit={this.props.addContact} />
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
           onDeleteContact={this.deleteContact}

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import actionType from './phoneBook-type';
+import * as actionType from './phoneBook-type';
 // const phoneBookInitialState = {
 //   contacts: [],
 //   filter: '',
@@ -25,7 +25,9 @@ const filterReducer = (state = '', { type, payload }) => {
   }
 };
 
-export const phoneBookReducer = combineReducers({
+ const phoneBookReducer = combineReducers({
   contacts: contactsReducer,
   filter: filterReducer,
 });
+
+export default phoneBookReducer;
