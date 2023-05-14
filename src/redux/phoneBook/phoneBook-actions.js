@@ -1,5 +1,6 @@
 import { nanoid } from 'nanoid';
 import actionType from './phoneBook-type';
+
 export const addContact = (name, number) => ({
   type: actionType.ADD,
   payload: {
