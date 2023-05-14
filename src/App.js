@@ -85,15 +85,15 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addContact: value => dispatch(value),
-  };
-};
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     addContact: value => dispatch(value),
+//   };
+// };
 
-const mapStateToProps = state => ({
-  contacts: state.phoneBook.contacts,
-  filter: state.phoneBook.filter,
-});
+// const mapStateToProps = state => ({
+//   contacts: state.phoneBook.contacts,
+//   filter: state.phoneBook.filter,
+// });
 
-export default connect(mapDispatchToProps, mapStateToProps)(App);
+// export default connect(mapDispatchToProps, mapStateToProps)(App);
