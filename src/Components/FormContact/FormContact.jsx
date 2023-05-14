@@ -1,20 +1,22 @@
-import { Component } from "react";
-import shortid from "shortid";
-import style from "./FormContact.module.css";
+import { Component } from 'react';
+import shortid from 'shortid';
+import style from './FormContact.module.css';
+import * as phoneBookActions from '../../redux/phoneBook/phoneBook-actions';
+import { connect } from 'react-redux';
 
 class FormContact extends Component {
   state = {
-    name: "",
-    number: "",
+    name: '',
+    number: '',
   };
 
-  handleChange = (event) => {
+  handleChange = event => {
     const { value, name } = event.currentTarget;
 
     this.setState({ [name]: value });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     const { name, number } = this.state;
     event.preventDefault();
 
@@ -24,7 +26,7 @@ class FormContact extends Component {
   };
 
   reset = () => {
-    this.setState({ name: "", number: "" });
+    this.setState({ name: '', number: '' });
   };
 
   render() {
@@ -67,4 +69,8 @@ class FormContact extends Component {
   }
 }
 
-export default FormContact;
+const mapDispatchToProps = dispatch => ({
+  onSubmit: text => dispatch(phoneBookActions.addContact(console.log(text))),
+});
+
+export default connect(null, mapDispatchToProps)(FormContact);

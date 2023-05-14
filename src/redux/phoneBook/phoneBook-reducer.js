@@ -9,7 +9,7 @@ import * as actionType from './phoneBook-type';
 const contactsReducer = (state = [], { type, payload }) => {
   switch (type) {
     case actionType.ADD:
-      return [state + payload];
+      return [...state, payload];
 
     default:
       return state;
@@ -18,14 +18,14 @@ const contactsReducer = (state = [], { type, payload }) => {
 const filterReducer = (state = '', { type, payload }) => {
   switch (type) {
     case actionType.CHANGE_FILTER:
-      return [state + payload];
+      return [...state, payload];
 
     default:
       return state;
   }
 };
 
- const phoneBookReducer = combineReducers({
+const phoneBookReducer = combineReducers({
   contacts: contactsReducer,
   filter: filterReducer,
 });

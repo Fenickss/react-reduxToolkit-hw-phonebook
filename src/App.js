@@ -5,17 +5,17 @@ import FormContact from './Components/FormContact/FormContact';
 import ContactList from './Components/ContactList';
 import Container from './Components/Container';
 import Filter from './Components/Filter';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 // import shortid from "shortid";
 
 class App extends Component {
-  // state = {
-  //   contacts: [],
-  //   filter: '',
-  //   name: '',
-  //   number: '',
-  // };
+  state = {
+    contacts: [],
+    filter: '',
+    name: '',
+    number: '',
+  };
 
   // addContact = (name, number) => {
   //   const contact = {
@@ -74,7 +74,7 @@ class App extends Component {
 
     return (
       <Container>
-        <FormContact onSubmit={this.props.addContact} />
+        <FormContact />
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
           onDeleteContact={this.deleteContact}
@@ -86,14 +86,13 @@ class App extends Component {
 }
 
 // const mapDispatchToProps = dispatch => {
-//   return {
-//     addContact: value => dispatch(value),
-//   };
+//   return {};
 // };
 
 // const mapStateToProps = state => ({
-//   contacts: state.phoneBook.contacts,
-//   filter: state.phoneBook.filter,
+
 // });
 
-// export default connect(mapDispatchToProps, mapStateToProps)(App);
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+export default App;
