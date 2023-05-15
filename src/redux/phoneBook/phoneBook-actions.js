@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 import * as actionType from './phoneBook-type';
 
-export const addContact = (name, number) => ({
+const addContact = (name, number) => ({
   type: actionType.ADD,
   payload: {
     name,
@@ -10,15 +10,18 @@ export const addContact = (name, number) => ({
   },
 });
 
-// sdfsdfsdfsdf функция
+const deleteContact = contactId => ({
+  type: actionType.DELETE,
+  payload: contactId,
+});
 
 // sdfsdfsdfsdfsd функция
 
 // и т.д
 
-export const changeFilter = event => ({
+const changeFilter = value => ({
   type: actionType.CHANGE_FILTER,
-  payload: event,
+  payload: value,
 });
 
-// export default { addContact, changeFilter };
+export { addContact, deleteContact, changeFilter };

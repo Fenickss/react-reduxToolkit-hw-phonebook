@@ -11,6 +11,9 @@ const contactsReducer = (state = [], { type, payload }) => {
     case actionType.ADD:
       return [...state, payload];
 
+    case actionType.DELETE:
+      return state.filter(({ id }) => id !== payload);
+
     default:
       return state;
   }
@@ -18,7 +21,7 @@ const contactsReducer = (state = [], { type, payload }) => {
 const filterReducer = (state = '', { type, payload }) => {
   switch (type) {
     case actionType.CHANGE_FILTER:
-      return [...state, payload];
+      return payload;
 
     default:
       return state;

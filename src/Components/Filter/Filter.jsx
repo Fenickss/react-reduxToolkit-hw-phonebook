@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import * as phoneBookActions from '../../redux/phoneBook/phoneBook-actions';
+import { connect } from 'react-redux';
 
 const Filter = ({ value, onChange }) => (
   <label>
@@ -7,4 +9,12 @@ const Filter = ({ value, onChange }) => (
   </label>
 );
 
-export default Filter;
+const mapStateToProps = state => ({
+  value: state.phoneBook.filter,
+});
+
+const mapDispatchToProps = dispatch => ({
+  onChange: e => dispatch(phoneBookActions.changeFilter(e.currentTarget.value)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Filter);
