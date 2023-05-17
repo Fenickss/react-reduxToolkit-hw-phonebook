@@ -42,8 +42,7 @@ const mapStateToProps = state => {
   );
 
   return {
-    phoneBook: FilteringСontact,
-    contacts: state.phoneBook.contacts,
+    contacts: FilteringСontact,
   };
 };
 
