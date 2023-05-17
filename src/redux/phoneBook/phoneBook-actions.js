@@ -1,41 +1,23 @@
 import { nanoid } from 'nanoid';
-import { createAction } from "@reduxjs/toolkit";
-import * as actionType from './phoneBook-type';
+import { createAction } from '@reduxjs/toolkit';
 
-// const addContact = (name, number) => ({
-//   type: actionType.ADD,
-//   payload: {
-//     name,
-//     number,
-//     id: nanoid(),
-//   },
-// });
 
-const addContact = createAction(actionType.ADD, (name, number) => {
-   return{
+const addContact = createAction('PhoneBook/addContact', (name, number) => {
+  return {
     payload: {
-  name,
-  number,
-  id: nanoid(),
-}
-  }
+      name,
+      number,
+      id: nanoid(),
+    },
+  };
 });
- 
 
-
-
-const deleteContact = contactId => ({
-  type: actionType.DELETE,
-  payload: contactId,
-});
+const deleteContact = createAction('PhoneBook/deleteContact');
 
 // sdfsdfsdfsdfsd функция
 
 // и т.д
 
-const changeFilter = value => ({
-  type: actionType.CHANGE_FILTER,
-  payload: value,
-});
+const changeFilter = createAction('PhoneBook/changeFilter');
 
-export { addContact, deleteContact, changeFilter };
+export  { addContact, deleteContact, changeFilter };
