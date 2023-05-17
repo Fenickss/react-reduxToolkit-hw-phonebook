@@ -7,9 +7,9 @@ import Filter from './Components/Filter';
 import { connect } from 'react-redux';
 
 class App extends Component {
-  formSubmitHandler = date => {
-    console.log(date);
-  };
+  // formSubmitHandler = date => {
+  //   console.log(date);
+  // };
 
   // componentDidMount() {
   //   const contacts = localStorage.getItem('contacts');
