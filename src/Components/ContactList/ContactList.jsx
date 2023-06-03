@@ -36,7 +36,7 @@ const ContactList = ({ contacts, onDeleteContact }) => (
 const mapStateToProps = state => {
   const { filter, contacts } = state.phoneBook;
   const normalizedFilter = filter.toLowerCase();
-
+  console.log(contacts);
   const FilteringСontact = contacts.filter(({ name }) =>
     name.toLowerCase().includes(normalizedFilter)
   );
