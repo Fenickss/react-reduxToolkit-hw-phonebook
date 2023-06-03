@@ -1,12 +1,11 @@
-import { Component } from 'react';
+import React from 'react';
 
 import FormContact from './Components/FormContact/FormContact';
 import ContactList from './Components/ContactList';
 import Container from './Components/Container';
 import Filter from './Components/Filter';
-import { connect } from 'react-redux';
 
-class App extends Component {
+const App = () => {
   // formSubmitHandler = date => {
   //   console.log(date);
   // };
@@ -26,19 +25,13 @@ class App extends Component {
   //   }
   // }
 
-  render() {
-    return (
-      <Container>
-        <FormContact />
-        <Filter />
-        <ContactList />
-      </Container>
-    );
-  }
-}
+  return (
+    <Container>
+      <FormContact />
+      <Filter />
+      <ContactList />
+    </Container>
+  );
+};
 
-const mapStateToProps = state => ({
-  contacts: state.phoneBook.contacts,
-});
-
-export default connect(mapStateToProps, null)(App);
+export default App;
