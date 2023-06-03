@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-reduxToolkit-hw-phonebook/static/css/main.660e3e3e.css",
-    "main.js": "/react-reduxToolkit-hw-phonebook/static/js/main.9545951c.js",
+    "main.js": "/react-reduxToolkit-hw-phonebook/static/js/main.299da043.js",
     "static/media/close-svgrepo-com.svg": "/react-reduxToolkit-hw-phonebook/static/media/close-svgrepo-com.5d2ad6ed6ae0c1f48792.svg",
     "index.html": "/react-reduxToolkit-hw-phonebook/index.html",
     "main.660e3e3e.css.map": "/react-reduxToolkit-hw-phonebook/static/css/main.660e3e3e.css.map",
-    "main.9545951c.js.map": "/react-reduxToolkit-hw-phonebook/static/js/main.9545951c.js.map"
+    "main.299da043.js.map": "/react-reduxToolkit-hw-phonebook/static/js/main.299da043.js.map"
   },
   "entrypoints": [
     "static/css/main.660e3e3e.css",
-    "static/js/main.9545951c.js"
+    "static/js/main.299da043.js"
   ]
 }
