@@ -13,10 +13,6 @@ const addContact = createAction('PhoneBook/addContact', (name, number) => {
 
 const deleteContact = createAction('PhoneBook/deleteContact');
 
-// sdfsdfsdfsdfsd функция
-
-// и т.д
-
 const changeFilter = createAction('PhoneBook/changeFilter');
 
 export { addContact, deleteContact, changeFilter };
